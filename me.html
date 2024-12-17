@@ -70,7 +70,14 @@
      </nav>
      <marquee height="100px" width=" auto" behavior="scroll"  bgcolor="#000000" size=" 1000" direction="left" align="middle" style="
      color:#ffffff; font-size: 2.5vw;">
-      網路是人們偉大的老師，提共我們許多資訊，讓我們的世界更加方便，但是也不能過度使用，希望大家可以好好使用
+        <div id="timeDisplay" style="font-size: auto; color: #f7f5f5;">
+        </div>
+        <script>
+          setInterval(() => {
+              const now = new Date();
+              document.getElementById("timeDisplay").innerText = "現在時間 : "+ now.toLocaleTimeString();
+          }, 1000);
+        </script>
      </marquee>
     <div class="title" style="color: #ffffff;text-align: center;">
       <h1>簡志融的網站</h1>
@@ -143,5 +150,8 @@
       <br>
       <button>送出</button>
     </div>
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" style="position: fixed; bottom: 20px; 
+            right: 40px; background: #0078ff; color: white; border: none; border-radius: 50%; width: 100px; 
+            height: 100px; cursor: pointer; font-size:50px;">↑</button>
   </body>
 </html>
